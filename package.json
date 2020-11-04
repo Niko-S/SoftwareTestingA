@@ -1,0 +1,20 @@
+{
+  "name": "software-testing-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "c8 --exclude src/.internal --exclude test/ mocha",
+    "coverage": "c8 report --reporter=text-lcov | coveralls"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "c8": "^7.3.5",
+    "chai": "^4.2.0",
+    "coveralls": "^3.1.0",
+    "mocha": "^8.2.0"
+  },
+  "devDependencies": {}
+}
