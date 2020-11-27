@@ -4,8 +4,6 @@ import reduce from '../src/reduce.js'
 const expect = chai.expect
 
 describe("Test reduce.js", () => {
-   it("no parameters = undefined",
-      () => expect(reduce()).to.equal());
 
    it("([1, 2], (sum, n) => sum + n, 0) = 3",
       () => expect(reduce([1, 2], (sum, n) => sum + n, 0)).to.equal(3));

@@ -9,8 +9,8 @@ function square(n) {
 
 describe("Test map.js", () => {
 
-   it("no parameter at all -> error", () => expect(() => map()).to.throw());
+   it("no parameter at all = []", () => expect(map()).to.eql([]));
+   it("([1,2,3]) -> error", () => expect(() => map([1,2,3])).to.throw());
 
    it("Map 1", () => expect(map([4, 8], square)).to.eql([16, 64]));
-   it("Map 2", () => expect(map([2, 4], square)).to.eql([4, 16]));
 })

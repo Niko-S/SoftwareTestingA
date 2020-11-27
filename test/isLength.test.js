@@ -7,7 +7,7 @@ const expect = chai.expect
 
 describe("Test isLength.js", () => {
 
-   it("no parameter at all -> error", () => expect(() => isLength()).to.throw());
+   it("no parameter at all = false", () => expect(isLength()).to.equal(false));
 
    it("Can be used in array 1", () => expect(isLength(3)).to.equal(true));
    it("Can be used in array 2", () => expect(isLength(1234567890)).to.equal(true));

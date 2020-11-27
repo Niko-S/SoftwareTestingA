@@ -4,7 +4,7 @@ import toNumber from '../src/toNumber.js'
 const expect = chai.expect
 
 describe("Test toNumber.js.", () => {
-   it("no parameters = 0",
+   it("no parameters = NaN",
       () => expect(toNumber()).to.eql(NaN));
 
    it("(3.2) = 3.2",

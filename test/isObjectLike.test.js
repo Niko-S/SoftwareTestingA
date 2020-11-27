@@ -7,7 +7,7 @@ const expect = chai.expect
 
 describe("Test isObjectLike.js", () => {
 
-   it("no parameter at all -> error", () => expect(() => isObjectLike()).to.throw());
+   it("no parameter at all = false", () => expect(isObjectLike()).to.equal(false));
 
    it("Is objectlike 1", () => expect(isObjectLike({})).to.equal(true));
    it("Is objectlike 2", () => expect(isObjectLike([1, 2, 3])).to.equal(true));

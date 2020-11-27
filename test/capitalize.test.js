@@ -9,8 +9,6 @@ describe("Test capitalize.js", () => {
    const randomCapitalize = "cApItAlIzE"
    const str = "capitalize THIS";
 
-   it("no parameter -> error", () => expect(() => capitalize()).to.throw());
-
    it("capitalize = Capitalize", () => expect(capitalize(lowerCapitalize)).to.equal("Capitalize"));
    it("CAPITALIZE = Capitalize", () => expect(capitalize(upperCapitalize)).to.equal("Capitalize"));
    it("cApItAlIzE = Capitalize", () => expect(capitalize(randomCapitalize)).to.equal("Capitalize"));

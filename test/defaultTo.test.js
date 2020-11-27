@@ -22,5 +22,4 @@ describe("Test defaultTo.js", () => {
    it("(undefined, true) = true", () => expect(defaultTo(undefined, true)).to.equal(true));
    it("(NaN, true) = true", () => expect(defaultTo(NaN, true)).to.equal(true));
    it("(false, true) = false", () => expect(defaultTo(false, true)).to.equal(false));
-
 })

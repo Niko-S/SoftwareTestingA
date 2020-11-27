@@ -10,8 +10,8 @@ const empty = [
 
 describe("Test isEmpty.js", () => {
 
-   it("no parameter at all -> error", () => expect(() => isEmpty()).to.throw());
-   it("Empty array -> error", () => expect(() => isEmpty(empty)).to.throw());
+   it("no parameter at all = true", () => expect(isEmpty()).to.equal(true));
+   it("[] = true", () => expect(isEmpty([])).to.equal(true));
 
    it("Is empty true 1", () => expect(isEmpty((true))).to.equal(true));
    it("Is empty true 2", () => expect(isEmpty((null))).to.equal(true));

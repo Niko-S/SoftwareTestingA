@@ -5,7 +5,6 @@ const expect = chai.expect
 
 describe("Test difference.js", () => {
 
-   it("no parameter = []", () => expect(difference()).to.eql([]));
    it("([],[1]) = []", () => expect(difference()).to.eql([]));
    it("([2, 1]) = [2,1]", () => expect(difference([2, 1])).to.eql([2,1]));
 

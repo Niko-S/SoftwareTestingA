@@ -7,7 +7,7 @@ const expect = chai.expect
 
 describe("Test isSymbol.js", () => {
 
-   it("no parameter at all -> error", () => expect(() => isSymbol()).to.throw());
+   it("no parameter at all = false", () => expect(isSymbol()).to.equal(false));
 
    it("Is symbol 1", () => expect(isSymbol(Symbol.iterator)).to.equal(true));
    it("Not symbol 1", () => expect(isSymbol([])).to.equal(false));

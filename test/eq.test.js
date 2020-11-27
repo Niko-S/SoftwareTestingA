@@ -7,7 +7,6 @@ describe("Test eq.js", () => {
    const object1 = { 'a': 1 }
    const object2 = { 'a': 1 }
 
-   it("no parameters = true", () => expect(eq()).to.equal(true));
    it("(object1) = false", () => expect(eq(object1)).to.equal(false));
    it("(undefined, object1) = false", () => expect(eq(undefined, object2)).to.equal(false));
 

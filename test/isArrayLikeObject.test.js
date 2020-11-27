@@ -7,11 +7,10 @@ const empty = [
       {}
 ]
 
-
 describe("Test isArrayLikeObject.js", () => {
 
-   it("no parameter at all -> error", () => expect(() => isArrayLikeObject()).to.throw());
-   it("Empty array -> error", () => expect(() => isArrayLikeObject(empty, "empty")).to.throw());
+   it("Empty array = false", () => expect(isArrayLikeObject(empty)).to.equal(true));
+   it("Object([]) = true", () => expect(isArrayLikeObject(Object([]))).to.equal(true));
 
    it("Can be used in an array + is an object 1", () => expect(isArrayLikeObject([1, 2, 3])).to.equal(true));
    it("Can be used in an array + is an object 2", () => expect(isArrayLikeObject([null])).to.equal(true));

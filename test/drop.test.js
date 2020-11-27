@@ -5,7 +5,6 @@ const expect = chai.expect
 
 describe("Test drop.js", () => {
 
-   it("no parameters = []", () => expect(drop()).to.eql([]));
    it("([]) = []", () => expect(drop([])).to.eql([]));
 
    it("([1, 2, 3]) = [2,3]", () => expect(drop([1, 2, 3])).to.eql([2, 3]));

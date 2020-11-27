@@ -5,7 +5,7 @@ const expect = chai.expect
 
 describe("Test castArray.js", () => {
 
-   it("no parameter = []", () => expect(castArray()).to.eql([]));
+   it("no parameter = [undefined]", () => expect(castArray()).to.eql([undefined]));
 
    it("1 = [1]", () => expect(castArray(1)).to.eql([1]));
    it("{'a':1} = [{'a':1}]", () => expect(castArray({ 'a': 1 })).to.eql([{ 'a': 1 }]));

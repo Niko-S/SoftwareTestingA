@@ -5,7 +5,8 @@ const expect = chai.expect
 
 describe("Test isBoolean.js", () => {
 
-   it("no parameter at all -> error", () => expect(() => isBoolean()).to.throw());
+   it("no parameter at all = false", () => expect(isBoolean()).to.equal(false));
+   it("Object(true) = true", () => expect(isBoolean(Object(true))).to.equal(true));
 
    it("Is boolean 1", () => expect(isBoolean(true)).to.equal(true));
    it("Is boolean  2", () => expect(isBoolean(false)).to.equal(true));

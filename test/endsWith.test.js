@@ -5,7 +5,6 @@ const expect = chai.expect
 
 describe("Test endsWith.js", () => {
 
-   it("no parameters -> error", () => expect(() => endsWith()).to.throw());
    it("('abc') -> error", () => expect(() => endsWith('abc')).to.throw());
    it("(undefined, 'a') -> error", () => expect(() => endsWith(undefined, 'a')).to.throw());
 

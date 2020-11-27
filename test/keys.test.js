@@ -10,9 +10,13 @@ function Foo() {
 
 Foo.prototype.c = 3
 
+let object1 = {};
+
 describe("Test keys.js", () => {
 
-   it("no parameter at all -> error", () => expect(() => keys()).to.throw());
+   it("no parameter at all = []", () => expect(keys()).to.eql([]));
+   it("object without properties = []", () => expect(keys(object1)).to.eql([]));
+
 
    it("key 1", () => expect(keys(new Foo)).to.eql,(['a', 'b']));
    it("Key 2", () => expect(keys('hi')).to.eql(['0', '1']));
