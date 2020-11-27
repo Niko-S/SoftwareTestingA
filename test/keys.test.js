@@ -3,15 +3,18 @@ import keys from '../src/keys.js'
 
 const expect = chai.expect
 
+function Foo() {
+   this.a = 1
+   this.b = 2
+}
 
+Foo.prototype.c = 3
 
 describe("Test keys.js", () => {
 
    it("no parameter at all -> error", () => expect(() => keys()).to.throw());
 
-   it("Is symbol 1", () => expect(keys(Symbol.iterator)).to.equal(true));
-   it("Not symbol 1", () => expect(keys([])).to.equal(false));
-   it("Not symbol 2", () => expect(keys(1)).to.equal(false));
-   it("Not symbol 3", () => expect(keys("1")).to.equal(false));
-   it("Not symbol 3", () => expect(keys('A')).to.equal(false));
+   it("key 1", () => expect(keys(new Foo)).to.eql,(['a', 'b']));
+   it("Key 2", () => expect(keys('hi')).to.eql(['0', '1']));
+   it("Key 3", () => expect(keys("123")).to.eql(['0', '1', '2']));
 })
